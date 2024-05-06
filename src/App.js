@@ -7,10 +7,10 @@ import coverSmoll3 from './fim-covers/kurmanjanSmoll.webp'
 import cover4 from './fim-covers/parazity.jpg'
 import coverSmoll4 from './fim-covers/parazitySmoll.webp'
 import Header from './components/header/header'
-import cover5 from '../../my-app/src/fim-covers/poestvpusan.jpg'
-import coverSmoll5 from '../../my-app/src/fim-covers/poestvpusanSmoll.jpg'
+import cover5 from './fim-covers/poestvpusan.jpg'
+import coverSmoll5 from './fim-covers/poestvpusanSmoll.jpg'
 import './index.css'
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/home-page/home-page'
 import FilmPage from './pages/film-page/film-page'
 import OrderPage from './pages/order-page/order-page'
@@ -76,19 +76,19 @@ function App() {
       genres: ['Боевик', 'Ужасы'],
       video: 'https://www.youtube.com/embed/58r-Rq_TuEI',
       price: 334,
-      description:'У маленькой Су-ан день рождения. Девочка живет с отцом в Сеуле и очень хочет отправиться к маме в Пусан. По дороге случается непредвиденное, и на страну обрушивается загадочный вирус. Пассажирам поезда в Пусан — единственного города, отразившего атаки вируса- придется бороться за выживание.'
+      description: 'У маленькой Су-ан день рождения. Девочка живет с отцом в Сеуле и очень хочет отправиться к маме в Пусан. По дороге случается непредвиденное, и на страну обрушивается загадочный вирус. Пассажирам поезда в Пусан — единственного города, отразившего атаки вируса- придется бороться за выживание.'
     }
   ]
 
   return (
     <div className="App">
-    <Header data={ITEMS}/>
+      <Header data={ITEMS} />
 
-    <Routes>
-      <Route path="/" element={<HomePage data={ITEMS}/>}/>
-      <Route path='film/:title' element={<FilmPage/>}/>
-      <Route path='/order' element={<OrderPage/>}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage data={ITEMS} />} />
+        <Route path='film/:title' element={<FilmPage />} />
+        <Route path='/order' element={<OrderPage />} />
+      </Routes>
     </div>
   );
 }
